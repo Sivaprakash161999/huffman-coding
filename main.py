@@ -1,5 +1,7 @@
-import heapq
 import os
+import sys
+import heapq
+
 
 class BinaryTreeNode:
     def __init__(self, value, freq):
@@ -185,7 +187,7 @@ class HuffmanCoding:
             
 # main    
 def main():   
-    path = input("Please enter the file to be compressed: ")
+    path = sys.argv[1]
     h = HuffmanCoding(path)
     output_path = h.compress()
     print(h.decompress(output_path))
